@@ -7,11 +7,8 @@
     <link rel="stylesheet" href="static/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body{
-            background-image: "static/images/bg.png";
-        }
-    </style>
+</head>
+
     <header class="main-header">
         <nav class="navbar">
             <div class="logo">
@@ -25,7 +22,7 @@
                 <li class="has-dropdown">
                     <a href="#">Pages <i class="fas fa-chevron-down nav-arrow"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/AboutUs">About Us</a></li>
+                       <!--<li><a href="/AboutUs">About Us</a></li>-->
                         <li><a href="/OurTeam">Our Team</a></li>
                         <li><a href="/Blog">Blog & FAQs</a></li>
                     </ul>
@@ -44,7 +41,6 @@
                     </ul>
                 </li>
 
-                <li><a href="#">Contacts</a></li>
             </ul>
             <div class="nav-utility-icons">
                 <div class="call-info">
@@ -52,25 +48,23 @@
                     <span class="phone-number">2381-50060070</span>
                 </div>
                 {% if user_name %}
-                    <div class="dropdown user-dropdown">
-                        <a href="#" class="btn btn-primary dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Hello, {{ user_name }}
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            {% if request.session.get("role") == "doctor" %}
-                                <li><a class="nav-link" href="/doctor/dashboard">Dashboard</a></li>
-                            {% elif request.session.get("role") == "patient" %}
-                                <li><a class="nav-link" href="/patient/dashboard">Dashboard</a></li>
-                            {% endif %}
-                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
-                        </ul>
-                    </div>
+                <div class="dropdown user-dropdown">
+                    <a href="#" class="btn btn-primary dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hello, {{ user_name }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    {% if role == "doctor" %}
+                        <li><a class="dropdown-item" href="/doctor/dashboard">Dashboard</a></li>
+                    {% elif role == "patient" %}
+                        <li><a class="dropdown-item" href="/patient/dashboard">Dashboard</a></li>
+                    {% endif %}
+                    <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
                 {% else %}
-                  <a href="/patient/login" class="btn btn-primary btn-login">Patient Login</a>
-                  <a href="/doctor/login" class="btn btn-primary btn-signup">Doctor Login</a>
+                <a href="/patient/login" class="btn btn-primary btn-login">Patient Login</a>
+                <a href="/doctor/login" class="btn btn-primary btn-signup">Doctor Login</a>
                 {% endif %}
-
-
             </div>
             <div class="menu-toggle" id="mobile-menu-toggle">
                 <span class="bar"></span>
@@ -82,6 +76,41 @@
 <main>
          <h1 class="flow-in-text">Welcome to Nexus Clinic</h1>
         <div style="height: 600px;"></div>
+
+       <!-- ABOUT US SECTION HTML -->
+
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+        <strong>Nexus Clinic</strong> is committed to providing compassionate, world-class health care and comprehensive health services. Our multidisciplinary team combines expertise with personalized treatment, ensuring every patient receives care tailored to their needs and lifestyle.
+      </p>
+      <div class="about-features">
+        <div class="about-feature">
+          <i class="fa-solid fa-heart-pulse"></i>
+          <span>Medical Experts</span>
+        </div>
+        <div class="about-feature">
+          <i class="fa-solid fa-stethoscope"></i>
+          <span>Modern Diagnostics</span>
+        </div>
+        <div class="about-feature">
+          <i class="fa-solid fa-users"></i>
+          <span>Patient-Centered Care</span>
+        </div>
+        <div class="about-feature">
+          <i class="fa-solid fa-award"></i>
+          <span>20+ Years Experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+=======
+>>>>>>> 60578765f82d519a931707239e76b1acaf05b1ab
+
      </main>
     <section class="hero-section" id="hero-slider">
         <div class="hero-content-wrapper">
@@ -95,17 +124,17 @@
             </div>
 
         </div>
-        <div class="hero-bg-elements">
+       <!-- <div class="hero-bg-elements"> 
             <img class="bg-element bg-heartbeat" src="https://in.pinterest.com/pin/38562140556516138/." alt="Heartbeat line">
             <img class="bg-element bg-tooth" src="https://via.placeholder.com/50x50/transparent?text=." alt="Tooth icon">
             <img class="bg-element bg-pulse" src="https://via.placeholder.com/80x80/transparent?text=." alt="Pulse icon">
             <img class="bg-element bg-brain" src="https://via.placeholder.com/70x70/transparent?text=." alt="Brain icon">
-        </div>
-        <div class="hero-nav-arrow hero-nav-left" id="slider-prev"><i class="fas fa-chevron-left"></i></div>
-        <div class="hero-nav-arrow hero-nav-right" id="slider-next"><i class="fas fa-chevron-right"></i></div>
+        </div>-->
+       <!-- <div class="hero-nav-arrow hero-nav-left" id="slider-prev"><i class="fas fa-chevron-left"></i></div> -->
+        <!--<div class="hero-nav-arrow hero-nav-right" id="slider-next"><i class="fas fa-chevron-right"></i></div>-->
     </section>
 
-    <section class="quick-actions-section">
+    <!--<section class="quick-actions-section">
         <div class="action-card">
             <i class="fas fa-hands-holding-child"></i>
             <h3>Our Services Providers</h3>
@@ -124,7 +153,7 @@
             </div>
             <a href="#" class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></a>
         </div>
-    </section>
+    </section>-->
 <body>
 
     <a href="#" class="back-to-top" id="backToTopBtn" aria-label="Back to top">
@@ -137,7 +166,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/AboutUs">About Us</a></li>
+                    <!--<li><a href="/AboutUs">About Us</a></li>-->
                     <li><a href="/">Services</a></li>
                     <li><a href="/News">News</a></li>
                     <li><a href="/Contacts">Contacts</a></li>
