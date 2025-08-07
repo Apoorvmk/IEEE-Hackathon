@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cool Alternating Sections</title>
+  <link rel="stylesheet" href="./static/css/style1.css">
 </head>
-<body style = "background-image: url(bg.jpg); background-size: cover; background-repeat: no-repeat;background-position: center; background-attachment: fixed;">
-  <header class="main-header">
+<body>
+    <header class="main-header">
         <nav class="navbar">
             <div class="logo">
                 <a href="/">
@@ -77,68 +74,85 @@
             </div>
         </nav>
     </header>
-    <h1>About us</h1>
-  <div class="section">
-  <div class="text-content">
-    <h1>Who We Are</h1>
-    <p>We are a bunch of passionate techies trying to simplify healthcare access.</p>
-  </div>
+  <pre>
+<h1 style="
+  
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 5rem;
+  letter-spacing: 1px;
+  color: #000000;
+  text-align: center;
+  
+  font-weight: 600;
+">
+ About Us
+</h1>
+</pre>
 
-  <div class="image-content">
-    <img src="walnut.jpg" alt="Cool team image">
-  </div>
+    <svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="curvyBlob" clipPathUnits="objectBoundingBox">
+      <path d="M0.5,0.05 
+               C0.72,0.13, 0.93,0.22, 0.97,0.43
+               C1,0.66, 0.78,0.86, 0.56,0.95
+               C0.3,1, 0.14,0.79, 0.07,0.56
+               C-0.02,0.31, 0.18,0.13, 0.5,0.05Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
+  <!-- Section 1 (image right) -->
+  <div class="section section-reverse">
+    <div class="image-content">
+      <div class="blob-image">
+  <img src="walnut.jpg" alt="Description">
 </div>
 
-  <div class="section">
-  <div class="text-content">
-    <h1>Who We Are</h1>
-    <p>We are a bunch of passionate techies trying to simplify healthcare access.</p>
+    </div>
+    <div class="text-content">
+      <h1>Who We Are</h1>
+      <ul>
+        <li>Passionate team</li>
+        <li>Committed to innovation</li>
+        <li>Driven by impact</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="image-content">
-    <img src="walnut.jpg" alt="Cool team image">
-  </div>
-</div>
+  <!-- Section 2 (image left) -->
   <div class="section">
-  <div class="text-content">
-    <h1>Who We Are</h1>
-    <p>We are a bunch of passionate techies trying to simplify healthcare access.</p>
-  </div>
-
-  <div class="image-content">
-    <img src="walnut.jpg" alt="Cool team image">
-  </div>
+    <div class="image-content">
+      <div class="blob-image">
+  <img src="walnut.jpg" alt="Description">
 </div>
 
-<footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/AboutUs">About Us</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/News">News</a></li>
-                    <li><a href="/Contacts">Contacts</a></li>
-                </ul>
-            </div>
+    </div>
+    <div class="text-content">
+      <h1>What Do We Do</h1>
+      <ul>
+        <li>We simplify healthcare access</li>
+        <li>Build modern digital tools</li>
+        <li>Focus on user experience</li>
+      </ul>
+    </div>
+  </div>
 
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>Email: adminnexus@gmail.com</li>
-                    <li>Phone: 2381-50060070</li>
-                    <li>Locations: Shivaji Nagar, Kharadi, Hadapsar, Dhankawadi, FC Road, JM Road, Kadki, Camp, Sangamwadi, Viman Nagar, Lohagaon, Bhosari, Ramwadi, Sinhagad Road, Katraj, Koregaon Park.</li>
-                </ul>
-            </div>
-            </div>
+  <!-- Section 3 (image right) -->
+  <div class="section section-reverse">
+    <div class="image-content">
+      <div class="blob-image">
+  <img src="walnut.jpg" alt="Description">
+</div>
 
-        <div class="footer-base">
-            <p>Copyrights © 2025. All Rights Reserved</p>
-        </div>
-    </footer>
-
-    <script src="static/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <div class="text-content">
+      <h1>Contact</h1>
+      <ul>
+        <li>Email: example@email.com</li>
+        <li>Phone: +91-12345-67890</li>
+        <li>Location: Your City</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
