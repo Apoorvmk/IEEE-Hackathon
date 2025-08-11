@@ -8,14 +8,25 @@ from passlib.context import CryptContext
 from pymongo import MongoClient
 from bson import ObjectId
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
 
 app = FastAPI()
 app.add_middleware(SessionMiddleware, secret_key="your-very-secret-key")
 
 # MongoDB Setup
-conn = MongoClient("mongodb+srv://apoorvmk457:apoorv.m.k@apoorv.bicllhf.mongodb.net/")
-db = conn["ApoointmentBooking"]
+
+
+
+load_dotenv()
+
+client = MongoClient(os.getenv("mongodb+srv://apoorvmk457:apoorv.m.k@apoorv.bicllhf.mongodb.net/"))
+db = client["ApoointmentBooking"]
+
+
+# conn = MongoClient("mongodb+srv://apoorvmk457:apoorv.m.k@apoorv.bicllhf.mongodb.net/")
+#db = conn["ApoointmentBooking"]
 patient_collection = db["Patients"]
 doctor_collection = db["Doctors"]
 
